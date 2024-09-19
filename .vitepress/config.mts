@@ -14,15 +14,18 @@ export default defineConfig({
   themeConfig: {
     logo: 'logo.jpg',
     nav: [
-      {text: '前端概要', link: '/client/'},
-      {text: '常用工具', link: '/tools/'},
-      {text: '运维基础', link: '/markdown-examples'},
-      {text: 'Nodejs', link: '/markdown-examples'},
+      {text: '前端基础', link: '/client', activeMatch: '/client'},
+      {text: '移动端', link: '/mobile', activeMatch: '/mobile'},
+      {text: '浏览器', link: '/browser/base', activeMatch: '/browser'},
+      {text: '设计模式', link: '/design-pattern', activeMatch: '/design-pattern'},
+      {text: '算法', link: '/algorithm'},
+      {text: '工具链', link: '/tools', activeMatch: '/tools'},
+      {text: '关于', link: '/about'},
       {text: '轻简历', link: 'https://www.wktline.com', target: 'blank'},
       {
-        text: '开源项目管理',
+        text: '我的开源',
         items: [
-          {text: '介绍', link: '/item-2'},
+          {text: 'wktline介绍', link: 'https://juejin.cn/post/7410062139275984936'},
           {text: '体验地址', link: 'http://121.40.42.56/'},
         ]
       }
@@ -75,47 +78,71 @@ export default defineConfig({
           ]
         },
         {
-          text: '浏览器',
+          text: '打包工具',
           collapsed: true,
           items: [
-            {text: '基础', link: '/client/browser/base'},
-          ]
-        },
-        {
-          text: '网络',
-          collapsed: true,
-          items: [
-            {text: '基础', link: '/client/network/base'},
-          ]
-        },
-        {
-          text: '设计模式',
-          collapsed: true,
-          items: [
-            {text: '基础', link: '/client/dpattern/base'},
-          ]
-        },{
-          text: '混合开发',
-          collapsed: true,
-          items: [
-            {text: '基础', link: '/client/hybrid/base'},
-          ]
-        },
-        {
-          text: 'Webpack',
-          collapsed: true,
-          items: [
-            {text: '基础', link: '/client/webpack/base'},
-          ]
-        },
-        {
-          text: 'Vite',
-          collapsed: true,
-          items: [
-            {text: '基础', link: '/client/vite/base'},
+            {text: 'webpack', link: '/client/packaging-tool/webpack'},
+            {text: 'vite', link: '/client/packaging-tool/vite'},
           ]
         },
       ],
+      '/browser': {
+        base: '/browser',
+        items: [
+          {text: '浏览器介绍', link: '/base'},
+          {text: '渲染原理', link: '/render'},
+          {text: '事件循环机制', link: '/event-loop'},
+          {text: '宏任务和微任务', link: '/network'},
+          {text: '浏览器缓存', link: '/cache'},
+          {text: '网络相关', link: '/network'},
+          {text: 'CORS/CSRF安全', link: '/secure'},
+          {text: '调试指南', link: '/debug-guide'},
+          {text: '插件开发', link: '/plugin-dev'},
+          {text: '插件推荐', link: '/plugin-recommendation'},
+        ]
+      },
+      '/algorithm': {
+        base: '/algorithm',
+        items: [
+          {text: '算法介绍', link: '/'},
+        ]
+      },
+      '/design-pattern': {
+        base: '/design-pattern',
+        items: [
+          {text: '设计模式', link: '/base'},
+        ]
+      },
+      '/mobile': {
+        base: '/mobile',
+        items: [
+          {text: '移动端', link: '/base'},
+        ]
+      },
+      '/tools/': {
+        base: '/tools/',
+        items: [{
+          text: '常用工具',
+          items: [
+            {
+              text: 'Git',
+              link: '/git'
+            },
+            {
+              text: 'Nginx',
+              link: '/nginx'
+            },
+            {
+              text: 'Docker',
+              link: '/docker'
+            },
+            {
+              text: 'Scp',
+              link: '/scp'
+            }
+          ]
+        }]
+      },
     },
     socialLinks: [
       {icon: 'github', link: 'https://github.com/vuejs/vitepress'}
