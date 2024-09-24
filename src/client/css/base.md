@@ -2,7 +2,9 @@
 outline: deep
 ---
 
-# CSS选择器
+# CSS基础扫盲
+
+## 一、CSS选择器
 - id选择器 `#id-name { color: #bd34fe; }`
 - 类选择器 `.class-name { color: #bd34fe; }`
 - 标签选择器 `p { color: #bd34fe; }`
@@ -14,17 +16,23 @@ outline: deep
 - 伪类选择器 `a:hover {color: #bd34fe;}`
 - 伪元素选择器（::before、::after） `div::before { color: #bd34fe; }`
 - 通配符选择器（*） `* { color: #bd34fe; }`
-
 > Tips：项目中 `:root {}` 等同于 `html {}`
 
-# CSS伪类与伪元素
+## 二、CSS优先级
+
+> 内敛 > id > class > 标签 > 通配符
+
+- 相同特殊性值的声明，根据样式引入的顺序，后声明的规则优先级高
+- 样式应用时，css会先查看规则的权重（!important），加了权重的优先级最高，当权重相同的时候，会比较规则的特殊性
+
+## 三、CSS伪类与伪元素
 > CSS3 标准中伪类统一使用单冒号 `:`，伪元素统一使用双冒号 `::`。为适配就浏览器兼容性，浏览器需要同时支持旧的已经存在的伪元素写法，
 比如:first-line、:first-letter、:before、:after等
-## 伪类
-- `:active` a 标签激活态
+### 伪类
 - `:link` a 标签默认状态
 - `:visited` a 标签点击后状态
 - `:hover` a 标签悬浮状态
+- `:active` a 标签激活态
 - `:empty` 元素为空
 - `:default` input、button（checkbox,radio）、option 的默认状态
 - `:checked` radio、checkbox 选中状态
@@ -43,8 +51,9 @@ outline: deep
 - `:focus` 表示获得焦点的元素（如表单输入）。当用户点击或轻触一个元素或使用键盘的 Tab 键选择它时，它会被触发
 - `:focus-visible` 聚焦状态依赖于 `:focus`
 - `:focus-within` 当元素或其任意后代元素被聚焦时，将匹配该元素
-> 更详细介绍请参考 [https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes)
-## 伪元素
+> 更伪类和详细介绍请参考 [https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes)
+
+### 伪元素
 - `::before` 在元素的内容之前插入内容
 - `::after` 在元素的内容之后插入内容
 - `::first-letter` 元素的首字母
