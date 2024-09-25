@@ -66,6 +66,21 @@ CSS Grid（网格布局）是一个二维布局系统，允许我们在水平和
 7. `grid-auto-rows`：指定网格容器中**未指定且多出**行的高度。
     - `grid-template-rows` 指定行高后，未指定的行高由 `grid-auto-rows` 决定。
 8. `*-items`: 如何设置**子元素内容**在**子元素中**的排布方式
-   - `justify-items`：
-   - `align-items`：
-   - `place-items`：
+   - `justify-items`： start | end | center | stretch(默认);
+   - `align-items`： start | end | center | stretch(默认);
+   - `place-items`：简写属性，用于同时设置 align-items 和 justify-items
+9. `*-content`: 如何设置**整个内容区域**在**容器中**的排布方式
+    - `justify-content`： start | end | center | stretch(默认);
+    - `align-content`： start | end | center | stretch(默认);
+    - `place-content`：简写属性，用于同时设置 align-content 和 justify-content
+
+### 项目属性介绍
+> 边框从 1 开始计数 如：`｜ a | b | c | `边框分别为 1、2、3、4
+- `grid-column-start`：左边框所在的垂直网格线
+- `grid-column-end`：右边框所在的垂直网格线
+- `grid-row-start`：上边框所在的水平网格线
+- `grid-row-end`：下边框所在的水平网格线
+- `*-self`
+  - `justify-self`: start | end | center | stretch(默认);
+  - `align-self`: start | end | center | stretch(默认);
+  - `place-self`: 简写属性，用于同时设置 align-self 和 justify-self
