@@ -37,9 +37,9 @@ export default defineConfig({
           text: 'CSS',
           collapsed: false,
           items: [
-            {text: '基础', link: '/client/css/base'},
-            {text: 'Flex', link: '/client/css/flex'},
-            {text: 'Grid', link: '/client/css/grid'},
+            {text: '基础扫盲', link: '/client/css/base'},
+            {text: 'Flex弹性布局', link: '/client/css/flex'},
+            {text: 'Grid网格布局', link: '/client/css/grid'},
             {text: 'CSS3', link: '/client/css/css3'},
             {text: '常见布局', link: '/client/css/layout'},
             {text: '动画实现', link: '/client/css/animation'},
