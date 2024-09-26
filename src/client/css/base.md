@@ -506,12 +506,10 @@ CSS 的声明是由属性和值组成的，而值的类型有许多种：
 - `not`：查询条件取反；
 - `only`：整个查询匹配的时候才生效，常用语兼容旧浏览器，使用时候必须指定媒体类型；
 - `逗号或者 or`：查询条件满足一项即可匹配；
--
 
 ```css
 /* 用户设备的最小高度为680px或为纵向模式的屏幕设备 */
-@media (min-height: 680px), screen and (orientation: portrait) {
-}
+@media (min-height: 680px), screen and (orientation: portrait) {}
 ```
 
 >
