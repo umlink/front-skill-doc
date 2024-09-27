@@ -2,9 +2,12 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 hero:
-  name: " 前端加油栈"
-  text: "一个记录前端知识图谱的站点"
+  name: "无心生大用"
+  text: "有道见乾坤"
   tagline: "自律、自省、自信、自由"
+  image:
+    src: /vitepress-logo.webp
+    alt: "无心"
   actions:
     - theme: brand
       text: 前端速查

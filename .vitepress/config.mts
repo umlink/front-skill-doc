@@ -2,7 +2,7 @@ import {defineConfig} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: " 前端加油栈",
+  title: "EasyFront",
   description: "一个记录前端知识图谱的站点",
   srcDir: './src',
   head: [
@@ -154,5 +154,9 @@ export default defineConfig({
     search: {
       provider: 'local',
     },
+    // docFooter: {
+    //   prev: '上一页',
+    //   next: '下一页',
+    // },
   },
 })
