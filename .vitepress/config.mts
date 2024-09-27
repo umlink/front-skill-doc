@@ -14,7 +14,17 @@ export default defineConfig({
   themeConfig: {
     logo: 'logo.jpg',
     nav: [
-      {text: '前端基础', link: '/client', activeMatch: '/client'},
+      {
+        text: '前端基础', activeMatch: '/client',
+        items: [
+          {text: 'CSS基础', link: '/client/css', activeMatch: '/client/css'},
+          {text: 'JavaScript', link: '/client/javascript', activeMatch: '/client/javascript'},
+          {text: 'TypeScript', link: '/client/typescript', activeMatch: '/client/typescript'},
+          {text: 'React', link: '/client/react', activeMatch: '/client/react/base'},
+          {text: 'Vue', link: '/client/vue', activeMatch: '/client/vue/base'},
+          {text: '打包优化', link: '/client/build', activeMatch: '/client/build/webpack'},
+        ]
+      },
       {text: '移动端', link: '/mobile', activeMatch: '/mobile'},
       {text: '浏览器', link: '/browser/base', activeMatch: '/browser'},
       {text: '设计模式', link: '/design-pattern', activeMatch: '/design-pattern'},
@@ -47,45 +57,45 @@ export default defineConfig({
             {text: '高级玩法', link: '/client/css/advanced'},
           ]
         },
-        {
-          text: 'Javascript',
-          collapsed: true,
-          items: [
-            {text: '原型链', link: '/client/js/prototype'},
-            {text: '闭包', link: '/client/js/closure'},
-            {text: '属性', link: '/client/js/attribute'},
-          ]
-        },
-        {
-          text: 'Typescript',
-          collapsed: true,
-          items: [
-            {text: '基础', link: '/client/typescript/base'},
-          ]
-        },
-        {
-          text: 'React',
-          collapsed: true,
-          items: [
-            {text: '基础', link: '/client/react/base'},
-          ]
-        },
-        {
-          text: 'Vue',
-          collapsed: true,
-          items: [
-            {text: '基础', link: '/client/vue/base'},
-          ]
-        },
-        {
-          text: '打包工具',
-          collapsed: true,
-          items: [
-            {text: 'webpack', link: '/client/packaging-tool/webpack'},
-            {text: 'vite', link: '/client/packaging-tool/vite'},
-          ]
-        },
       ],
+      '/client/javascript/': {
+        text: 'Javascript',
+        collapsed: true,
+        items: [
+          {text: '原型链', link: '/client/javascript/prototype'},
+          {text: '闭包', link: '/client/javascript/closure'},
+          {text: '属性', link: '/client/javascript/attribute'},
+        ]
+      },
+      '/client/typescript/': {
+        text: 'TypeScript',
+        collapsed: true,
+        items: [
+          {text: '基础', link: '/client/typescript/base'}
+        ]
+      },
+      '/client/react/': {
+        text: 'React',
+        collapsed: true,
+        items: [
+          {text: '基础', link: '/client/react/base'},
+        ]
+      },
+      '/client/vue/': {
+        text: 'Vue',
+        collapsed: true,
+        items: [
+          {text: '基础', link: '/client/vue/base'},
+        ]
+      },
+      '/client/build/': {
+        text: '打包工具',
+        collapsed: true,
+        items: [
+          {text: 'webpack', link: '/client/build/webpack'},
+          {text: 'vite', link: '/client/build/vite'},
+        ]
+      },
       '/browser': {
         base: '/browser',
         items: [

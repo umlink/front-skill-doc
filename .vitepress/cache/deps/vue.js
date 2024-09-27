@@ -340,4 +340,4 @@ export {
   withModifiers,
   withScopeId
 };
-//# sourceMappingURL=vue.js.map
+//# sourceMappingURL=vue.javascript.map

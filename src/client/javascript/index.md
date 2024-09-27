@@ -2,4 +2,4 @@
 outline: deep
 ---
 
-## css 总入口
+## 总入口
